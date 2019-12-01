@@ -1,3 +1,5 @@
+package day1;
+
 import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -7,7 +9,7 @@ import java.util.ArrayList;
 
 public class Day1 {
     public static void main(String[] args) throws IOException {
-        FileInputStream fileReader = new FileInputStream("files\\input.txt");
+        FileInputStream fileReader = new FileInputStream("src\\day1\\files\\input.txt");
         BufferedReader br = new BufferedReader(new InputStreamReader(fileReader, StandardCharsets.UTF_8));
         ArrayList<Integer> list = new ArrayList<>();
         String row;
@@ -24,13 +26,13 @@ public class Day1 {
             }
 
         }
-        int wynik = 0;
+        int result = 0;
 
         for (int number : list) {
-            wynik = number + wynik;
+            result = number + result;
             System.out.println(number);
         }
-        System.out.println("Suma paliwa to: " + wynik);
+        System.out.println("All fuel is: " + result);
 
         fileReader.close();
         br.close();
